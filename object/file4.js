@@ -21,11 +21,6 @@ details.sayHello();
 details.sayHello;   // ƒ () { console.log("Hello World!""); } i.e., we get the function definition
 
 
-//We can also add object method to an object
-details.calAge= function(birthyear) {
-    return 2022 - birthyear
-}
 
-//Now if we want to call calAge method,
-console.log(details.calAge(1996));
+console.log(details);
 
