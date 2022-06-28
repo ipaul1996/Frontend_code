@@ -38,3 +38,8 @@ person2.sayHello();
 
 //It should be noted that if we add any property/method to a particular object it only gets added to that not in other objects and not in constructor function. 
 //If we do any changes in constructor function it will be refelected in all the objects that generated from it
+
+
+
+//Each object created from the constructor function is an instanceof the constructor function
+console.log(person1 instanceof ConstructorDetails); //true
