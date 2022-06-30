@@ -1,5 +1,3 @@
-
-
 //console.log(typeof(fetch));
 //fetch is an inbuilt function
 
