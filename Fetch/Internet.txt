@@ -1,4 +1,4 @@
-//A server is a computer program or device that provides a service(data) to another computer program and its user, also known as the client, over a network.(Server serves data to different computers over a netweork)
+//A server is a computer program or device that provides a service(data) to another computer program and its user, also known as the client, over a network.(Server serves data to different computers over a network)
 
 //A computer network is an interconnection among two or more computers or computing devices.Such interconnection allows computers to share data and resources among each other
 

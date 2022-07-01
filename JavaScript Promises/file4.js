@@ -1,4 +1,4 @@
-//A different way of handling promises ---> using async function
+//A different way of handling promises ---> using async function and await keyword
 
 document.querySelector("#image").src="https://c.tenor.com/K2UGDd4acJUAAAAC/load-loading.gif";
 
@@ -19,8 +19,8 @@ let p1=new Promise(function(resolve,reject){
 })
 
 //An async function is a function declared with the async keyword, and the await keyword is permitted within it.
-//try block got executed if promise state of p1 object is 'fulfilled'. Here await p1 returns the promiseresult and store in res
-//catch block got executed if promise state of p1 object is 'rejected'. Here err accepts the promise result
+//try block got executed if promise state of p1 object is 'fulfilled'. Here 'await p1' returns the promiseresult and store in res. The await operator is used to wait for a Promise
+//catch block got executed if promise state of p1 object is 'rejected'. Here err accepts the promiseresult
 //try and catch both are statements, both used together
 async function myPayment() {
     try{
