@@ -2,7 +2,7 @@
 document.querySelector("#image").src="https://c.tenor.com/K2UGDd4acJUAAAAC/load-loading.gif";
 
 function bankserver() {
-    return true;
+    return false;
 }
 
 
@@ -14,7 +14,7 @@ let p1=new Promise(function(resolve,reject){
              } else {
                  reject("Try Again...");
              }
-        },4000)       
+        },2000)       
 })
 console.log(p1)
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="city">
+    <button onclick="myFunc()">Search</button>
+    <div id="container"></div>
+
+</body>
+</html>
+<script>
+
+    function myFunc() {
+      let City=document.querySelector("#city").value;
+      const url='https://api.openweathermap.org/data/2.5/weather?q='+City+'&appid=c4a3f7839d85c9233e52bfa7b414f8d0'
+      fetch(url)
+      .then(function(res){
+        return res.json();
+      })
+      .then(function(res1){
+        console.log(res1);
+        let 
+      })
+      .catch(function(err){
+        console.log(err);
+      })
+    }
+</script
