@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotstar</title>
+</head>
+<body>
+    <input type="text" id="query" placeholder="Search" oninput="main()">
+    <div></div>
+</body>
+</html>
+
+<script>
+    var r;
+    function main() {
+        let inp=document.getElementById('query').value;
+        getData(inp); 
+        if(r!==undefined) {
+            console.log(r);
+            //append(r);
+        }
+        
+    }
+    function getData(movie) {
+        const url=`https://www.omdbapi.com/?apikey=f90ef288&s=${movie}`
+        return fetch(url)
+        .then((result) => {
+           return result.json();
+        })
+        .then((result) => {
+            r=result.Search;
+            return result.Search;
+        }).catch((err) => {
+            console.log(err);
+        });
+        
+    }
+</script>
