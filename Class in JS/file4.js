@@ -16,11 +16,7 @@ class OurArray {
         this.arr[this.length]=el;
         this.length+=1;
     }
-    // pop() {
-    //     let temp=this.arr[this.length-1];
-    //     this.length=this.length-1;
-    //     return temp;
-    // }
+    
 }
 
 let arr1=new OurArray();
