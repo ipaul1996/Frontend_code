@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Class Problem</title>
+    <style>
+        #container {
+            width:90%;
+            margin:auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:20px;
+        }
+    </style>
 </head>
 <body>
-    
+    <input type="text" name="query" id="query" placeholder="search">
+    <button id="btn" onclick="search()">Search</button>
+    <div id="container"></div>
 </body>
 </html>
-<script src="practise.js"></script>
+
+<script src="./practise.js"></script>
