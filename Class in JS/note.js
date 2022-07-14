@@ -12,7 +12,7 @@ class Rectangle {
     }
   }
   
-  let box = new Rectangle(12, 13);
+  let box1 = new Rectangle(12, 13);
   // The constructor is a special function for initializing objects created with class. They work similar to function constructors.
   
   // They also support simple instance methods/functions with short declaration syntax.
@@ -50,8 +50,8 @@ class Rectangle {
     }
   }
   
-  const sai = new Person('Sai', 15)
-  const jay = new Person('Jay', 12)
+  const Sai = new Person('Sai', 15)
+  const Jay = new Person('Jay', 12)
   // Inheritance
   // Classes also support inheritance which means they can take properties and functions from other classes.
   
