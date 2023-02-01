@@ -26,6 +26,7 @@ sayHello(function(x) {
 // }
 
 
+
 // The function immediately stops executing immediately when it reaches the return statement. Therefore, you can use the return statement without a value to exit the function prematurely,
 function say(message) {
     // show nothing if the message is empty
