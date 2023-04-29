@@ -1,0 +1,66 @@
+<!-- Class Problem -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Show</title>
+    <style>
+        #slide_box {
+            margin: auto;
+            width:450px;
+            height:400px;
+            margin-top: 60px;
+        }
+        #slide_box>img {
+            width:100%;
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Slide Show</h1>
+    <input type="img" placeholder="Enter Image URL" id="img_url">
+    <button onclick="setToLocal()">Submit</button>
+    <button onclick="startSlideShow()">Start Slide Show</button>
+    <button onclick="pauseSlideShow()">Pause Slide Show</button>
+    <div id="slide_box"></div>
+</body>
+</html>
+
+<script>
+ 
+    //Storing Images in the loacal storage in the form of an array with the key imageData
+    function setToLocal() {
+        let Image=document.getElementById("img_url");
+        let imageArrayIn= JSON.parse(localStorage.getItem("imageData"))|| [];
+        imageArrayIn.push(Image.value);
+        localStorage.setItem("imageData", JSON.stringify(imageArrayIn));
+        Image.value=""; //Also we can use null here.
+    }
+    
+    //Function for slideshow
+    let id;
+    let i=0;
+    let startSlideShow = function() {
+        let imageArrayOut=JSON.parse(localStorage.getItem("imageData"));
+        let Container=document.querySelector("#slide_box");
+        id = setInterval(function(){
+          if(i===imageArrayOut.length) {
+            i=0;
+          }
+          let Slide=document.createElement("img");
+          Slide.src=imageArrayOut[i];
+          Container.innerHTML="";
+          Container.append(Slide);
+          i++;
+        },2000)
+    }
+
+
+    //Function for pausing Slide show
+    function pauseSlideShow() {
+        clearInterval(id);
+    }
+</script>
