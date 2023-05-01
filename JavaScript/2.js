@@ -112,7 +112,7 @@ console.log(myString5); //This is a string \ with a backslash character
 //Template Literal: 
 //It allows us to use the single quotes and double quotes 
 //inside a string without the need of escaping them.
-
+//Template literals --> ``(Backticks)
 let myString6 = `Hey! "Indrajit", How are you?`;
 console.log(myString6); //Hey! "Indrajit", How are you?
 
