@@ -1,13 +1,12 @@
 //Function - 2
 
 /*
-Functions are first-class citizens in JavaScript. That means they are treated as regular values
-and can be used like any other data type, such as strings or numbers. Specifically, 
-it means that:
+In JavaScript, functions are first-class objects. It means that:
 
 1. Functions can be assigned to variables or passed as arguments to other functions.
 2. Functions can be returned as values from other functions.
 3. Functions can be stored in data structures like arrays or objects.
+4. They can also have properties and methods just like any other object.
 
 */
 
@@ -68,3 +67,24 @@ function myFunc () {
 
 myFunc()()()()()()()()(); //Hello World!
 
+
+//We can add property and methods to a function.
+function mySubtract(a, b) {
+    return a - b;
+}
+ 
+mySubtract.color = "red";
+mySubtract.sayHello = function() {
+    console.log("Hello!");
+}
+ 
+console.log(mySubtract.color); //red
+mySubtract.sayHello(); //Hello
+console.log(mySubtract.sayHello);
+/*
+ƒ () {
+    console.log("Hello!");
+}
+*/
+console.log(Object.keys(mySubtract)); //['color', 'sayHello']
+console.log(Object.values(mySubtract)); //['red', ƒ]
