@@ -20,6 +20,9 @@ details.calAge = function(birthyear) {
 //Now if we want to call calAge method,
 console.log(details.calAge(1996));
 
+//using bracket notation
+console.log(details["calAge"](1996));
+
 
 // We can add an object method in an object in following manners also
 
@@ -41,5 +44,7 @@ let sayBye = function() {
 //How to add this function as a method of details object
 details.mySayBye = sayBye;
 console.log(details);
+
+
 
 

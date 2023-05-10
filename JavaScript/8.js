@@ -20,10 +20,10 @@ let details= {
 //How to access an object property
 console.log(details.Gender);
 
-//How to access an oject method
+//How to access(i.e., call or invoke) an oject method
 details.sayHello();
 //Here we are accessing sayHello method. If, we do,
-details.sayHello;   // ƒ () { console.log("Hello World!""); } i.e., we get the function definition
+details.sayHello; // ƒ () { console.log("Hello World!""); } i.e., we get the function definition
 
 
 

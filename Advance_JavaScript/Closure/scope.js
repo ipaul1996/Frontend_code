@@ -1,11 +1,14 @@
 //Scope
 
-// Scope determines the accessibility of variables from different parts of the code. JavaScript has three scopes:
+// Scope determines the accessibility of variables from different parts of the code. 
+//JavaScript has three scopes:
 // The global scope
 // Local scope
 // Block scope (started from ES6)
 
-//A variable declared at the top of a program or outside of a function is considered a global variable and it has a global scope i.e., it can be accessed from anywhere, globally or inside of a function or inside of a block.
+//A variable declared at the top of a program or outside of a function is considered a 
+//global variable and it has a global scope i.e., it can be accessed from anywhere, 
+//globally or inside of a function or inside of a block.
 //The value of a global variable can be changed inside a function. For example,
 let a = "hello";
 
@@ -20,7 +23,9 @@ console.log(a); //"Hello"
 greet();
 console.log(a); // 3
 
-//Note: It is a good practice to avoid using global variables because the value of a global variable can change in different areas in the program. It can introduce unknown results in the program.
+//Note: It is a good practice to avoid using global variables because the value of 
+//a global variable can change in different areas in the program. It can introduce unknown 
+//results in the program.
 
 //Variables declared with var, let and const are quite similar when declared globally, they all have global scope.
 

@@ -1,5 +1,8 @@
 //apply method
-//Its functionality is same as the call method but the only difference is that how we can pass its arguments.We can only pass two arguments in it, 1st argument is the object in which we want to use the object method and 2nd argument is the array of arguments of the object method.
+//Its functionality is same as the call method but the only difference is that 
+//how we can pass its arguments.We can only pass two arguments in it, 1st argument is the 
+//object in which we want to use the object method and 2nd argument is the array of arguments 
+//of the object method.
 
 
 let obj1={

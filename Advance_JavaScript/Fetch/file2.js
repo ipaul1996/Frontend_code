@@ -28,3 +28,30 @@ function displayData(data) {
      Container.append(divP);
     })
 }
+
+
+async function myGetData() {
+     
+    try {
+        let res = await fetch(url);
+        let data = await res.json();
+        displayData(data);
+        
+    } catch (error) {
+        console.log(error);
+    }
+     
+    
+}
+
+
+fetch(url)
+.then(function(res1) {
+    return res1.json();
+})
+.then(function(res2){
+    displayData(res2.data);
+})
+.catch(function(error) {
+    console.log(error);
+})

@@ -1,4 +1,4 @@
-//JavaScript has the primitive types: number, string, boolean, null, undefined, symbol 
+//JavaScript has 7 primitive types: number, string, boolean, null, undefined, symbol 
 //and bigint and a complex type: object.
 
 //typeof operator - checks data type of the operand. It returns a string 
@@ -32,7 +32,7 @@ console.log(typeof(y)); //"object"
 
 //JavaScript uses the number type to represent both integer and floating-point numbers.
 
-let price = 12.00; //It is interpreted as 12 - JS always try to resduce memory usage
+let price = 12.00; //It is interpreted as 12 - JS always try to reduce memory usage
 let discount = 0.05;
 
 let num = 200.00;
@@ -55,7 +55,7 @@ console.log(Number.MAX_VALUE + 1); //1.7976931348623157e+308
 
 console.log(Number.MAX_VALUE * 2); //Infinity
 
-//NaN -> Not a number - a special numeric value
+//NaN -> Not a number - a special numeric value that represents a value that is not a valid number.
 
 console.log("a"/2); //NaN 
 
@@ -77,7 +77,8 @@ greetings = greetings + " World!"; //Concatenating a string using '+' operator
 
 console.log(greetings); //Hello World!
 console.log(greet); //Hello
-//So Strings are immutable in JS - can not be modified. If we try to do so, new String will be created.
+//So Strings are immutable in JS - can not be modified. If we try to do so, new String will 
+//be created.
 
 
 let s = "JavaScript";
@@ -198,7 +199,7 @@ console.log(typeof(pageView)); // 'bigint'
 
 /* **************************** object type********************************* */
 
-//object --> Collection of properties(key-value pairs)
+//object --> Unordered Collection of properties(key-value pairs)
 
 let person = {
     firstName: "John",

@@ -12,9 +12,22 @@ const url="https://reqres.in/api/users?page=2"
 //console.log(fetch(url));
 fetch(url)
 .then(function(res){
-    //console.log(res);  //This res parameter accepts the promiseresult which is an object named 'Response'.This Response object has a property named body with value readablestream(which is an object) reprsents readable stream of data.
-    //console.log(res.json()); //The json() method of the Response interface takes a Response stream and reads it to completion. It returns a promise which resolves with the result of parsing the body text as JSON. When the parsing is not done the promise state is pending and when it is done the promise state is fulfilled.
-    return res.json()   //This is a promise object and it has a promiseresult which is an object named 'Object'. This object has a property named 'data' in which required data is stored.
+
+    //console.log(res);  //This res parameter accepts the promiseresult which is an 
+                         //object named 'Response'.This Response object has a property named 
+                         //body with value readablestream(which is an object) reprsents 
+                         //readable stream of data.
+
+    //console.log(res.json()); //The json() method of the Response interface takes a 
+                               //Response stream and reads it to completion. It returns a 
+                               //promise which resolves with the result of parsing the body 
+                               //text as JSON. When the parsing is not done the promise state 
+                               //is pending and when it is done the promise state is fulfilled.
+
+    return res.json()   //This is a promise object and it has a promiseresult which is an 
+                        //object named 'Object'. This object has a property named 'data' in 
+                        //which required data is stored.
+                        
 })
 .then(function(res1){
     displayData(res1.data);   

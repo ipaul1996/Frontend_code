@@ -8,7 +8,7 @@
 
 //When any of these values are used in a Boolean context, such as in an if statement or 
 //as an operand to the logical operators (&&, ||, !), they are considered false. 
-//Any other value that is not in the above list is considered truthy.
+//Any other value that is not in the above list is considered as truthy.
 
 if (0) {
   // This block will not execute, since 0 is falsy

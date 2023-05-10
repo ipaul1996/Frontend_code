@@ -61,7 +61,7 @@ let newLength1 = a.push(true);
 console.log(a); //[ 1, 2, 3, 'Hello', null, true ]
 console.log(newLength1); //6
 
-//Adding an element at the beigin of the array
+//Adding an element at the begining of the array
 let newLength2 = a.unshift("Masai");
 console.log(a); //[ 'Masai', 1, 2, 3, 'Hello', null, true ]
 console.log(newLength2); //7

@@ -18,7 +18,9 @@ let p1=new Promise(function(resolve,reject){
 })
 console.log(p1)
 
-//If the promise state of p1 object is fulfilled, 'then' method(Which is prsent in the prototype of p1 object i.e., p1.__proto__ or Promise.prototype and p1 inherits it) got executed.
+//If the promise state of p1 object is fulfilled, 'then' method(Which is prsent in the 
+//prototype of p1 object i.e., p1.__proto__ or Promise.prototype and p1 inherits it) got 
+//executed.
 p1.then(function(x){
     console.log(x);
     document.querySelector("#image").src="https://fcs3pub.s3.amazonaws.com/photo-book/images/payment/success.gif";
