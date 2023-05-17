@@ -1,4 +1,4 @@
-//Prototypal Inheritance - 1
+//Prototypal Inheritance
 
 
 /*

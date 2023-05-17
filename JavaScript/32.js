@@ -35,10 +35,12 @@ The return value will be used as the value of the property.
 set(default - undefined): A function which serves as a setter for the property, or undefined if there is no setter. 
 When the property is assigned, this function is called with one argument (the value being assigned to the property) 
 and with this set to the object through which the property is assigned.
-If a descriptor doesn't have any of the value, writable, get, and set keys, it is treated as a data descriptor. 
-If a descriptor has both [value or writable] and [get or set] keys, an exception is thrown.
 enumerable(default - false): A boolean indicating whether the property can be listed during enumeration.
 configurable(default - false): A boolean indicating whether the property can be deleted or modified.
+
+If a descriptor doesn't have any of the value, writable, get, and set keys, it is treated as a data descriptor. 
+If a descriptor has both [value or writable] and [get or set] keys, an exception is thrown.
+
 
 
 
@@ -189,3 +191,108 @@ The set method splits the argument by the space and assigns the firstName and la
 the corresponding parts of the name.
 
 */
+
+
+for(const y in person1) {
+  console.log(y, person1[y]);
+}
+
+
+/*
+
+firstName Asmita
+lastName Paul
+fullName Asmita Paul
+
+
+*/
+
+
+
+// ***************************************************************************************** //
+
+const car = {
+  make: 'Toyota',
+  model: 'Corolla',
+  year: 2021
+};
+
+//Accessor descriptor
+Object.defineProperty(car, 'age', {
+  get: function() {
+    return new Date().getFullYear() - this.year;
+  },
+  enumerable: true,
+  configurable: false
+});
+
+//Accessor descriptor
+Object.defineProperty(car, 'description', {
+  get: function() {
+    return `This is a ${this.make} ${this.model} from ${this.year}.`;
+  },
+  set: function(value) {
+    const parts = value.split(' ');
+    this.make = parts[0];
+    this.model = parts[1];
+    this.year = parseInt(parts[2]);
+  },
+  enumerable: true,
+  configurable: true
+});
+
+//Data Descriptor
+Object.defineProperty(car, 'color', {
+  value: 'red',
+  writable: true,
+  enumerable: false,
+  configurable: false
+});
+
+//Data Descriptor
+Object.defineProperty(car, 'model', {
+  value: 'Corolla',
+  writable: true,
+  enumerable: true,
+  configurable: false
+});
+
+console.log(car);
+
+/*
+{make: 'Toyota', model: 'Corolla', year: 2021, …}
+age: (...)
+description: (...)
+make: "Toyota"
+model: "Corolla"
+year: 2021
+color: "red"
+get age: ƒ ()
+get description: ƒ ()
+set description: ƒ (value)
+[[Prototype]]: Object
+*/
+
+console.log(car.age); // Output: 2
+console.log(car.description); // Output: This is a Toyota Corolla from 2021.
+console.log(car.color); // Output: red
+console.log(car.model); // Output: Corolla
+
+car.description = 'Honda Civic 2018';
+console.log(car.description); // Output: This is a Honda Civic from 2018.
+console.log(car.make); // Output: Honda
+console.log(car.model); // Output: Civic
+console.log(car.year); // Output: 2018
+
+car.color = 'blue';
+console.log(car.color); // Output: blue
+
+for (const key in car) {
+  console.log(key); // Output: make, model, year, age, description
+}
+
+delete car.color; // fails silently, configurable is false
+console.log(car.color); //blue
+
+delete car.model; // fails silently, configurable is false and property is non-configurable
+console.log(car.model); //Civic
