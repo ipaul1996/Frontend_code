@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Listener Example</title>
+</head>
+<body>
+  <button id="myButton">Click Me</button>
+
+  <script>
+    function handleClick(event) {
+      console.log("Button clicked!");
+      console.log("This points to the clicked button:", this);
+    }
+
+    var button = document.getElementById("myButton");
+    button.addEventListener("click", handleClick);
+
+    /*
+
+        Output:
+        Button clicked!
+        This points to the clicked button: <button id="myButton">Click Me</button>
+
+    */
+   
+  </script>
+</body>
+</html>

@@ -1,50 +1,4 @@
-//"this" keyword - 1
-//In JS, the this references the object of which the function is a property. In other words, the this references 
-//the object that is currently calling the function.
-
-const person = {
-    name: 'John',
-    age: 30,
-    greet() {
-      console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
-    }
-};
-  
-person.greet(); // Output: "Hello, my name is John and I am 30 years old."
-//When we call person.greet(), the this keyword inside the greet method refers to the person object, 
-//which is the object that is currently calling the method.
-
-
-//In the global context, the this references the global object, which is the window object on the web browser 
-//or global object on Node.js.
-
-console.log(this);
-//Window {window: Window, self: Window, document: document, name: '', location: Location, …}
-console.log(this === window); //true
-
-//Here if we assign any property to "this" object, it will be added to global object,
-this.color = "purple";
-console.log(window.color); //purple
-
-
-//In the non-strict mode, the this references the global object when the function is called as follows:
-function show() {
-    console.log(this === window);
-}
- 
-show(); //true
-//We can also call it in the following ways,
-window.show(); //true
-this.show(); //true
-
-
-//In the strict mode, JavaScript sets the this inside a function to undefined
-function show1() {
-    "use strict";
-    console.log(this);
-}
-
-show1(); //undefined
+//Strict mode in JS("use strict")
 
 
 /*
@@ -145,27 +99,3 @@ alert (x);        // This will cause an error
 protected, public, static, yield. 
 
 */
-
-
-function show2() {
-    "use strict";
-    console.log(this === undefined); // true
-
-    function display() {
-        console.log(this === undefined); // true
-    }
-    display();
-}
-
-show2();
-
-
-//Constructor Invocation
-function Person(name, age) {
-    this.name = name;
-    this.age = age;
-}
-
-let p1 = new Person("IP", 26);
-console.log(p1);
-//Here this refers to p1 object
