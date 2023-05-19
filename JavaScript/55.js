@@ -1,4 +1,4 @@
-//Array Methods - 1
+//Array Methods
 
 
 //length property 
@@ -547,7 +547,7 @@ arr.sort(compareFunction)
 Compare function is as follows,
 
 function compare(a, b) {
-  // ...
+    ...
 }
 
 If it returns value that is,
@@ -1027,6 +1027,15 @@ letters.copyWithin(2, 1);
 
 // modifies the original array 
 console.log(letters); // ['a', 'b', 'b', 'c']
+
+
+
+//reduceRight()
+
+
+
+
+
 
 //multidimensional array
 //JavaScript does not provide the multidimensional array natively. However, we can create a 
