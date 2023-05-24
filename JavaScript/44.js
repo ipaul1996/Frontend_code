@@ -1,4 +1,10 @@
 //Array Destructuring
+//Array destructuring is a feature in JavaScript that allows you to extract values from an array 
+//and assign them to variables in a concise way. It is like unpacking the array.
+//It does not affect the original array
+//In array destructuring order matters
+
+
 
 let [x, y, z] = [70, 80, 90];
 //In L.H.S x, y and z are enclosed in [] but it does not mean it is an array, it is just 
@@ -82,5 +88,10 @@ console.log(a1, b1, c1, d1, e1); // Output: "h" "e" "l" "l" "o"
 //When we use array destructuring with a string, each character in the string becomes an element in the array.
 
 
+const nested = [1, 2, [5, 6]];
+
+const [x1, , [y1, z1]] = nested;
+
+console.log(x1, y1, z1); //1 5 6
 
 

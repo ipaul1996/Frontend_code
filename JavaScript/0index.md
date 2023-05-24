@@ -92,7 +92,11 @@
 
 - [object destructuring](45.js)
 
-- [Optional chaining operator](46.js)
+- [Optional chaining operator](46.0.js)
+
+- [Spread operator](46.1.js)
+
+- [Rest Pattern & Rest Parameter](46.2.js)
 
 - ["this" keyword](47.0.js)
 

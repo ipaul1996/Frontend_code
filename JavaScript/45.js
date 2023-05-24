@@ -1,4 +1,8 @@
 //Object Destructuring
+//Object destructuring is a feature in JavaScript that allows you to extract properties from an object 
+//and assign them to variables with a concise syntax.
+//It does not affect the original array
+//Here order does not matter but property name does
 
 let person = {
     firstName: 'John',
@@ -50,3 +54,33 @@ const [{ name: firstName1, age: age1 }, { name: firstName2, age: age2 }] = arr;
 console.log(firstName1, age1, firstName2, age2); // Output: John 25 Jane 30
 
 
+let a = 111;
+let b = 22;
+
+let obj = {a: 10, b: 12};
+
+//a and b is already declared
+({a, b} = obj);
+
+console.log(a, b); //10 12
+
+function printDetails({name, age, state}) {
+    return `Hey! I am ${name}. My age is ${age}. Currently, I am living in ${state}`;
+}
+
+
+const res = printDetails({age: 26, name: "IP", state: "WB"});
+console.log(res); //Hey! I am IP. My age is 26. Currently, I am living in WB
+//Here the caller of the function does not have to be worried about order of the parameters.
+
+
+let nested = {
+    name: "IP",
+    address: {
+        state: "WB",
+        city: "Kolkata"
+    }
+};
+
+let {name:n, address:{state: s, city: c}} = nested;
+console.log(`Name: ${n}, State: ${s}, City: ${c}`); //Name: IP, State: WB, City: Kolkata
