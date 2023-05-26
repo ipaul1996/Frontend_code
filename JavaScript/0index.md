@@ -110,7 +110,9 @@
 
 - [bind()](50.js)
 
-- [HOF - 1](51.js): HOF, Callback function
+- [HOF - 1](51.0.js): HOF, Callback function
+
+- [HOF - 1.1](51.1.js): HOF, Callback function
 
 - [HOF - 2](52.js): forEach, map
 

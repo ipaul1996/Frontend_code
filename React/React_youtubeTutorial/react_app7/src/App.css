@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  background-color: rgb(54, 51, 203);
+  color:white;
+  padding: 15px;
+  margin-bottom: 20px;;
+  
+}
+
+h1 {
+  margin:0
+}
