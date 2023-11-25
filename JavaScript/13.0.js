@@ -6,25 +6,27 @@
 //elements: 1 , 2, "Three", null, true
 //indexes:  0   1     2      3     4
 
-//An array can hold values of mixed types.
+//An array can hold values of mixed types - This means you can store elements of different data types, 
+//such as numbers, strings, objects, functions, and even other arrays, all within a single array.
 //The size of an array is dynamic and auto-growing i.e., we don’t need to specify 
 //the array size up front.
-//Array is a kind of object in JS
+//Array is a special kind of object in JS.
 
 //Ways of creating an array in JS
 
 //Array literal notation - prefered way of creating an array
 let arr1 = []; //empty array
 let arr2 = [1, 2, "Three", true, null];
-console.log(typeof(arr2)); //object
+console.log(typeof arr2); //object
+let mixedArray = [42, "hello", { key: "value" }, function() { console.log("Function called"); }];
 
 
 //Using Constructor function to create an array - rarely used
 let arr3 = new Array(); //empty array
-let arr4 = new Array(5); //array of initial size 5
+let arr4 = new Array(5); //array of initial size 5, [undefined, undefined,undefined,undefined,undefined]
 let arr5 = new Array(1, 2, 3); //array with three elements 1,2 3
 
-let ar = new Array(10).fill(15); //an array of 15 elements, all initialized to 15 
+let ar = new Array(10).fill(15); //an array of 10 elements, all initialized to 15 
 
 //JS allow us to omit the "new" keyword while creating an array i.e.,
 let arr6 = Array();
@@ -32,9 +34,28 @@ let arr7 = Array(5);
 let arr8 = Array(1, 2, 3);
 
 
-//Array.of() method
+//Array.of() method - It is used to create a new array instance with a variable number of elements, 
+//regardless of the number or types of the arguments passed to it.
+//const newArray = Array.of(element1, element2, ...);
 let arr9 = Array.of(5); //an array having single element 5
 let arr10 = Array.of(1, 2, "Three", true, null);
+
+const arrayOfArrays = Array.of([1, 2], [3, 4], [5, 6]);
+console.log(arrayOfArrays); // Output: [[1, 2], [3, 4], [5, 6]]
+
+const str1 = 'hello';
+const charArray = Array.of(...str1); // spread syntax
+console.log(charArray); // Output: ['h', 'e', 'l', 'l', 'o']
+
+const values = [10, 20, 30];
+const combinedArray = Array.of(...values, 40, 50); // spread syntax
+console.log(combinedArray); // Output: [10, 20, 30, 40, 50]
+
+
+//Array() v/s Array.of()
+const a1 = Array(3);      // [undefined, undefined, undefined]
+const a2 = Array.of(3);   // [3]
+
 
 
 //Array.from() method
@@ -46,7 +67,8 @@ let arr12 = Array.from(arr8);
 console.log(arr12); //[ 1, 2, 3 ]
 
 
-//Basic operations on array
+
+//Basic operations on arrays
 
 let a = [1, 2, 3, "Hello", null]
 //Finding length of an array

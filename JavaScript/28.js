@@ -16,7 +16,7 @@ be the new instance of the constructor function.
 is set to the constructor function's prototype property. This means that the new object 
 inherits properties and methods from the constructor function's prototype.
 
-3. Binds this to the new object: The this keyword inside the constructor function 
+3. Binds "this" to the new object: The this keyword inside the constructor function 
 is set to the new object. This means that the properties and methods defined within the 
 constructor function are added to the new object.
 

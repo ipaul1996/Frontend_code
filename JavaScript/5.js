@@ -1,7 +1,11 @@
-//object1 - Unordered collection of properties(key-value pairs)
-//key --> Property name
-//value --> Property value 
-//Creating object with object literal notation
+//object1
+
+// object - Unordered collection of properties(key-value pairs)
+// key --> Property name
+// value --> Property value 
+
+// Creating object with object literal notation
+
 let details= {
     Name: "Indrajit Paul",
     Age: 25,
@@ -10,17 +14,17 @@ let details= {
     Ismarried: "false" 
 }
 
-//How can we access any property inside an object?
-//Dot Notation
-console.log(details.Name); //Indrajit Paul
-console.log(details.Ismarried);  //false
+// How can we access any property inside an object?
+// Dot Notation
+console.log(details.Name); // Indrajit Paul
+console.log(details.Ismarried);  // false
 
-//Bracket Notation
-console.log(details["City"]); //Kolkata
-console.log(details['Age']); //25
+// Bracket Notation
+console.log(details["City"]); // Kolkata
+console.log(details['Age']); // 25
 
 
-//How to update any property value?
+// How to update any property value?
 details.Name="IP";
 details["Age"]=24;
 console.log(details);
@@ -37,7 +41,7 @@ console.log(details);
 
 */
 
-//How to add new property/key-value pair inside an object?
+// How to add new property/key-value pair inside an object?
 details.Interest="coding";
 
 //We can add a property to an object with value as an array
@@ -87,11 +91,11 @@ console.log(details);
 
 */
 
-//Checking if a property exist
-console.log("City" in details); //true //"in" is an operator
-console.log("State" in details); //false
+// Checking if a property exist
+console.log("City" in details); // true // "in" is an operator
+console.log("State" in details); // false
 
-//We can also have properties having spaces in between. But it is not a good practise
+// We can also have properties having spaces in between. But it is not a good practise
 let address = {
   State: "WB",
   City: "Kolkata",
@@ -104,6 +108,6 @@ console.log(address);
 { State: 'WB', City: 'Kolkata', 'Building No.': '22/2F' }
 */
 
-console.log(address["Building No."]); //22/2F
-//But we can not access the same with dot notation
+console.log(address["Building No."]); // 22/2F
+// But we can not access the same with dot notation
 

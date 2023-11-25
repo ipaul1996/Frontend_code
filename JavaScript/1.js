@@ -2,6 +2,8 @@
 
 var message; //special value - undefined ---> Undefined variable
 console.log(message); //undefined
+// In JavaScript, when you declare a variable using let (or var or const), it is automatically initialized 
+// with the value undefined. 
 
 let message1;
 
@@ -18,5 +20,5 @@ let x = 30,
 
 const workDays = 5;
 
-//workDays = 6;  //Uncaught TypeError: Assignment to constant variable.
+//workDays = 6;  //Uncaught TypeError: Assignment to a constant variable.
 

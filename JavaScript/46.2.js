@@ -1,5 +1,5 @@
 //Rest Pattern & Rest Parameter
-//The rest pattern looks exactly like the spread operator. So it has the same syntax with the three dots 
+//The rest pattern looks exactly like the spread syntax. So it has the same syntax with the three dots 
 //but it actually does the opposite of the spread operator. The rest pattern collect multiple elements 
 //and condense them into an array i.e., it pack elements into an array.
 //Generally, We use REST syntax in the LHS and spread operator in the RHS
@@ -71,7 +71,7 @@ add(4, 3, 5, 8, 10, 121);
 add(410, 1, 2, 5, 6, 10, 125, 11);
 
 const x1 = [1, 2, 3, 4];
-add(...x1); //spread operator(Unpacking)
+add(...x1); //spread syntax(Unpacking)
 
 
 function filterBy(type, ...args) {

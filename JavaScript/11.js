@@ -3,8 +3,8 @@
 //"this" magical word
 
 //Typically, object methods need to access other properties of the object.
-//Inside a method, the this value references the object that invokes the method. 
-//Therefore, we can access a property using the this value as follows:
+//Inside a method, the 'this' value references the object that invokes the method. 
+//Therefore, we can access a property using the 'this' value as follows:
 
 let person = {
     firstName:"Indrajit",

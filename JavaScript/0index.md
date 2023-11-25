@@ -24,7 +24,11 @@
 
 - [primitive vs reference value](12.js)
 
-- [array](13.js): Intro and some basic operations
+- [array](13.0.js): Intro and some basic operations
+
+- [array](13.1.js): Why arrays are a special kind of object?
+
+- [shallow & deep copy](13.2.js): What is the difference between deep and shallow copying?
 
 - [Arithmatic operators](14.js): +, -, *, /, %
 
@@ -94,7 +98,7 @@
 
 - [Optional chaining operator](46.0.js)
 
-- [Spread operator](46.1.js)
+- [Spread syntax](46.1.js)
 
 - [Rest Pattern & Rest Parameter](46.2.js)
 
