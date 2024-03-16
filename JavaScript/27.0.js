@@ -30,8 +30,8 @@ function add(x = requiredArg(), y = requiredArg()){
    return x + y;
 }
  
-add(10); // The argument is required
-add(10,20); // returns 30
+add(10); 
+add(10,20); 
 
 
 

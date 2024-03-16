@@ -1,7 +1,7 @@
 //Arrow function
 /*
 
-n JavaScript, an arrow function is a concise syntax for creating functions. It was introduced in ECMAScript 6 (ES6) 
+In JavaScript, an arrow function is a concise syntax for creating functions. It was introduced in ECMAScript 6 (ES6) 
 as an alternative to traditional function expressions. Arrow functions provide a more concise and intuitive 
 way to define functions, especially for small and simple functions.
 
