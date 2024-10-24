@@ -122,8 +122,8 @@
 // Create a Date object for the current date and time
 new Date(); 
 console.log(new Date());  // 2024-10-23T20:33:29.208Z
-// When we console date objct JS internally calls toString() or toISOString() based on 
-// the current environment
+// Even if this is formatted in this way, this is an object.
+console.log(typeof new Date());  // object
 
 // Create a Date object from a numeric value (milliseconds since epoch)
 new Date(1633024800000); 
