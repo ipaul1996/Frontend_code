@@ -44,8 +44,10 @@ console.log(false && false); //false //2nd value is not evaluated
 //For each operand, converts it to a boolean. If the result is false, stops 
 //and returns the original value. If all values are truthy values, returns the last value.
 
-//If a non-boolean value can be converted to true, it is called a truthy value. 
-//If a non-boolean value can be converted to false, it is called falsy value.
+// falsy value: A value that is considered false when evaluated in a Boolean context.
+// false, 0 and -0, "", null, undefined, NaN
+// truthy value: A value that is considered true when evaluated in a Boolean context.
+// Any value that is not falsy.
 
 let b = true;
 let result = b && (1 / 0);
